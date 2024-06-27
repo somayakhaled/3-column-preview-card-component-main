@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+$Bright_orange: hsl(31, 77%, 52%);
+$Dark_cyan: hsl(184, 100%, 22%);
+$Very_dark_cyan: hsl(179, 100%, 13%);
+$Transparent_white: hsla(0, 0%, 100%, 0.75);
+$Very_light_gray: hsl(0, 0%, 95%);
+$margins: 40px;
+
+*, 
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $Transparent_white;
+    color: $Very_light_gray;
+}
+
+main{
+    padding: 4rem 5rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1824px;
+}
+
+.card1, .card2, .card3{
+    padding: 4rem 3rem;
+}
+
+.card1{
+    background-color: $Bright_orange;
+}
+
+.card2{
+    background-color: $Dark_cyan;
+}
+
+.card3{
+    background-color: $Very_dark_cyan;
+}
+
+h2{
+    font-family: "Big Shoulders Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: xx-large;
+}
+
+p{
+    line-height: 2;
+    padding-bottom: 1.5rem;
+}
+
+.btn{
+        background-color: $Very_light_gray;
+        border-radius: 30px;
+        width: 140px;
+        height: 40px;
+        border: 3px solid $Very_light_gray;
+        font-family: "Lexend Deca", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+}
+
+.card1 button{
+    color: $Bright_orange;
+
+    &:hover{
+        background-color: $Bright_orange;
+        color: $Very_light_gray;
+        transition: all 300ms ease-in-out;
+    }
+}
+
+.card2 button{
+    color: $Dark_cyan;
+
+    &:hover{
+        background-color: $Dark_cyan;
+        color: $Very_light_gray;
+        transition: all 300ms ease-in-out;
+    }
+}
+
+.card3 button{
+    color: $Very_dark_cyan;
+
+    &:hover{
+        background-color: $Very_dark_cyan;
+        color: $Very_light_gray;
+        transition: all 300ms ease-in-out;
+    }
+}
+
+@media (min-width: 1024px){
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    p{
+        padding-bottom: 4rem;
+    }
+
+    main{
+        padding: 5rem 10rem;
+    }
+}
